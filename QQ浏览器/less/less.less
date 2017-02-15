@@ -1,0 +1,546 @@
+/***颜色***/
+@colorR: red;
+@colorG: green;
+@colorF: #FFF;
+@colorSkyB: skyblue;
+@colorB: #000;
+
+/***绝对定位***/
+.myAbsoluteC(@width:900px,@height:600px) {
+  position: absolute;
+  width: @width;
+  height: @height;
+  left: 50%;
+  top: 50%;
+  margin-left: @width/-2;
+  margin-top: @height/-2;
+}
+
+/***固定定位***/
+.myFixed(@width:'',@height:'') {
+  position: fixed;;
+  width: @width;
+  height: @height;
+}
+
+/***圆***/
+.myRound() {
+  border-radius: 50%;
+}
+
+/***动画***/
+.myAnimate(@name:'', @m:'') {
+  animation: @name @m infinite;
+}
+
+/***位移***/
+.myTransform(@tx:0px,@ty:0px,@tz:0px,@rx:0deg,@ry:0deg,@rz:0deg,@sx:1,@sy:1,@sz:1) {
+  transform: translateX(@tx) translateY(@ty) translateZ(@tz) rotateX(@rx) rotateY(@ry) rotateZ(@rz) scaleX(@sx) scaleY(@sy) scaleZ(@sz);
+}
+
+/***居中***/
+.myCenter(@lh:'') {
+  text-align: center;
+  line-height: @lh;
+}
+
+/***背景***/
+.wh(@w:'',@h:'') {
+  width: @w;
+  height: @h;
+}
+
+/*******************配置********************/
+html, body, section {
+  .wh(100%, 100%);
+  overflow: hidden;
+}
+section {
+  perspective: 1000px;
+  position: relative;
+}
+section.p1 {
+  background: url(../img/page1_glow.png) no-repeat center 100px,
+  linear-gradient(0deg, #395ecb 0%, #3657be 35%, #242161 75%, #1a0531 100%);
+}
+section.p2 {
+  background: linear-gradient(0deg, #41b93e 0%, #3b9e3c 35%,
+  #274535 75%, #190530 100%);
+}
+section.p3 {
+  background: linear-gradient(0deg, #395ecb 0%, #3657be 35%, #242161 75%, #1a0531 100%);
+}
+section.p4 {
+  background: url(../img/page4_glow.png) no-repeat center 200px, linear-gradient(0deg, #ff9f42 0%, #ed923d 35%, #6d3816 75%, #2e0b04 100%);
+}
+section.p5 {
+  background: url(../img/page5_glow.png) no-repeat center -300px, linear-gradient(0deg, #d74d53 0%, #c44655 35%, #4c184c 75%, #110145 100%);
+}
+
+/*******************侧边********************/
+.gps {
+  .myFixed(10px, 130px);
+  list-style: none;
+  top: 50%;
+  margin-top: -70px;
+  right: 20px;
+  background: @colorR;
+  li {
+    width: 10px;
+    height: 10px;
+    background: @colorG;
+    .myRound();
+    cursor: pointer;
+  }
+}
+.gps > li + li {
+  margin-top: 20px;
+}
+.cur {
+  background: @colorSkyB !important;
+}
+
+/*******************底部********************/
+.footer {
+  .myFixed(100%, 30px);
+  bottom: 30px;
+  line-height: 30px;
+  color: @colorF;
+}
+.footer > ul {
+  padding-top: 10px;
+}
+.footer > ul > li {
+  font-size: 12px;
+  line-height: 12px;
+  height: 12px;
+  float: left;
+  padding: 0 20px;
+}
+.footer > ul > li + li {
+  border-left: 1px solid #FFFFFF;
+}
+.scrollImg {
+  position: absolute;
+  .myAbsolute(29px, 34px);
+  left: 50%;
+  bottom: 30px;
+  margin-left: -15px;
+  .myAnimate(topAndBt, 0.8s);
+  animation-direction: alternate;
+}
+
+/*******************头部********************/
+.logo {
+  .myAbsolute(260px, 50px);
+  line-height: 50px;
+  left: 15px;
+  top: 10px;
+  z-index: 10;
+  img {
+    vertical-align: middle;
+  }
+  a {
+    color: @colorF;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    .wh(100px, 35px);
+    .myCenter(35px);
+    &:hover {
+      background: @colorF;
+      color: @colorB;
+    }
+  }
+}
+
+/*******************第一屏*****************/
+.p1 .p1Logo {
+  .myAbsolute(530px, 140px);
+  margin-top: 100px;
+  margin-left: -265px;
+  left: 50%;
+  color: @colorF;
+  img {
+    width: 350px;
+    vertical-align: middle;
+  }
+}
+.p1 .p1Logo a {
+  color: @colorF;
+  .wh(120px, 40px);
+  .myCenter(40px);
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  &:hover {
+    background: @colorF;
+    color: @colorB;
+  }
+}
+.p1 .p1Main ul {
+  .myAbsoluteC(900px, 600px);
+  transform-style: preserve-3d;
+  .myAnimate(spinSportY, 15s);
+  z-index: -1;
+  li {
+    .myAbsoluteC(580px, 361px);
+    backface-visibility: hidden;
+  }
+}
+.p1 .p1Main > ul > li:nth-child(1) {
+  .myTransform(0px, 0px, 0px, 0deg, 0deg, 0deg, 1, 1, 1);
+}
+.p1 .p1Main > ul > li:nth-child(2) {
+  .myTransform(0, 0, 70px, 0deg, 0deg, 0deg, 1, 1, 1);
+}
+.p1 .p1Main > ul > li:nth-child(3) {
+  .myTransform(0, 0, 70px, 0deg, 180deg, 0deg, 1, 1, 1);
+}
+.p1 .p1Main > ul > li:nth-child(4) {
+  .myTransform(0, 0, 0, 0deg, 180deg, 0deg, 1, 1, 1);
+}
+.p1 .p1Main > ul > li:nth-child(5) {
+  .myTransform(0, 0, -70px, 0deg, 180deg, 0deg, 1, 1, 1);
+}
+.p1 .p1Round {
+  z-index: -1;
+  .myAbsoluteC(680px, 680px);
+  .myTransform(0, 0, 0, 100deg, -40deg, 0deg, 1.2, 1.2, 1);
+  img {
+    .myAnimate(spinSportZ, 3s)
+  }
+}
+
+/****************第二屏*****************/
+.p2 .p2Img span {
+  .myAbsoluteC(5000px, 1px);
+  background: @colorF;
+  .myTransform(0, 0, 0px, 0deg, -50deg, 0deg, 1, 1, 1);
+}
+.p2 .p2Img img:nth-of-type(1) {
+  .myAbsoluteC(684px, 395px);
+  margin-left: -100px;
+}
+.p2 .p2Img img:nth-of-type(2) {
+  .myAbsoluteC(346px, 123px);
+  margin-left: 150px;
+}
+.p2 .p2Main ul {
+  transition: all 1s linear;
+  .myAbsoluteC();
+  li {
+    .myAbsoluteC(350px, 350px);
+    img {
+      .myAnimate(spinSportZ, 3s);
+    }
+  }
+}
+.p2 .p2Main ul li:nth-child(1) {
+  .myTransform(150px, 0, 0, 0deg, 30deg, 0deg, 1, 1, 1);
+}
+.p2 .p2Main ul li:nth-child(2) {
+  .myTransform(50px, 0, 0, 0deg, 30deg, 0deg, 1, 1, 1);
+}
+.p2 .p2Main ul li:nth-child(3) {
+  .myTransform(-50px, 0, 0, 0deg, 30deg, 0deg, 1, 1, 1);
+}
+.p2 .p2Main ul li:nth-child(4) {
+  .myTransform(-150px, 0, 0, 0deg, 30deg, 0deg, 1, 1, 1);
+}
+.p2 .p2Title {
+  transition: all 1s linear;
+  .myAbsoluteC(400px, 200px);
+  margin-top: -48px;
+  margin-left: -600px;
+  p {
+    line-height: 30px;
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+}
+.p2.current .p2Main ul, .p2.current .p2Title {
+  .myTransform(0, 0, 0, 0deg, 0deg, 0deg, 5, 5, 1)
+}
+
+/****************第三屏*****************/
+.p3Bg {
+  .myAbsoluteC();
+}
+.p3Bg img:nth-child(1) {
+  .myAbsoluteC(1368px, 1111px);
+}
+.p3Bg img:nth-child(2) {
+  .myAbsoluteC(131px, 130px);
+}
+.p3Main {
+  .myAbsoluteC();
+  transition: all 1s linear;
+  ul {
+    .myAbsoluteC();
+    transform-style: preserve-3d;
+    .myAnimate(p3Spin, 25s);
+    li {
+      .myAbsoluteC(680px, 680px);
+      border: 1px solid #fff;
+      .myRound;
+    }
+  }
+}
+.p3Main ul li:nth-child(1) {
+  .myTransform(0, 0, 0, 0deg, 60deg, 0deg, 1, 1, 1);
+}
+.p3Main ul li:nth-child(2) {
+  .myTransform(0, 0, 0, 0deg, 0deg, 0deg, 1, 1, 1);
+}
+.p3Main ul li:nth-child(3) {
+  .myTransform(0, 0, 0, 0deg, -60deg, 0deg, 1, 1, 1);
+}
+.p3Main ul li:nth-child(1) img {
+  .myAnimate(spinSportZ, 2s);
+}
+.p3Main ul li:nth-child(2) img {
+  .myAnimate(spinSportZ, 3s);
+}
+.p3Main ul li:nth-child(3) img {
+  .myAnimate(spinSportZ, 3s);
+}
+.p3Title {
+  .myAbsoluteC(450px, 149px);
+  margin-left: 135px;
+  .myTransform(0, 0, 0, 35deg, 0deg, 0deg, 1, 1, 1);
+  transition: all 1s linear;
+}
+.p3.current .p3Main {
+  .myTransform(0, 0px, 0, 0deg, 0deg, 0deg, 5, 5, 1)
+}
+.p3.current .p3Title {
+  .myTransform(1000px, 0, 0, 0deg, 0deg, 0deg, 1, 1, 1)
+}
+
+/****************第四屏*****************/
+.p4 .p4Line {
+  .myAbsoluteC(200%, 200px);
+  border: 1px solid @colorF;
+  margin-top: 70px;
+}
+.p4 .p4Line span:nth-child(1) {
+  .myAbsoluteC(346px, 123px);
+  margin-top: 38px;
+
+  img {
+    .myAnimate(p4Line, 2s);
+  }
+}
+.p4 .p4Line span:nth-child(2) {
+  .myAbsoluteC(346px, 123px);
+  margin-top: -164px;
+  img {
+    .myAnimate(p4Line, 1s);
+  }
+}
+.p4 .p4Main {
+  .myAbsoluteC();
+  transition: all 1s linear;
+  ul {
+    .myAbsoluteC();
+    transform-style: preserve-3d;
+    .myTransform(0, 0, 0, 45deg, 0deg, 0deg, 1, 1, 1);
+    li {
+      .myAbsoluteC(414px, 414px);
+      margin-top: -142px;
+
+    }
+  }
+}
+.p4 .p4Main ul li:nth-child(1) {
+  .myTransform(0, 0, 0, 0deg, 0deg, 0deg, 1, 1, 1);
+  img {
+    .myAnimate(spinSportZ, 30s);
+  }
+}
+.p4 .p4Main ul li:nth-child(2) {
+  .myTransform(0, 0, 0px, 0deg, 0deg, 0deg, 1, 1, 1);
+  img {
+    .myAnimate(spinSportZ, 30s);
+  }
+}
+.p4 .p4Main ul li:nth-child(3) {
+  .myTransform(0, 0, -100px, 0deg, 0deg, 0deg, 1, 1, 1);
+  img {
+    .myAnimate(spinSportZ, 30s);
+  }
+}
+.p4 .p4Main ul li:nth-child(4) {
+  .myTransform(0, 0, -100px, 0deg, 0deg, 0deg, 1, 1, 1);
+  img {
+    .myAnimate(spinSportZ, 6s);
+  }
+}
+.p4 .p4Main ul li:nth-child(5) {
+  .myTransform(0, 0, 10px, 0deg, 0deg, 0deg, 1, 1, 1);
+  img {
+    .myAnimate(spinSportZ, 2s);
+  }
+}
+.p4 .p4Title {
+  .myAbsoluteC(300px, 71px);
+  .myTransform(0, 0, 0, 35deg, 0deg, 0deg, 1.2, 1, 1);
+  margin-left: 200px;
+  transition: all 1s linear;
+}
+.p4 .p4Tag {
+  .myAbsoluteC(300px, 100px);
+  transition: all 1s linear;
+  margin-left: -420px;
+  p {
+    color: @colorF;
+    font-size: 16px;
+    line-height: 40px;
+  }
+}
+.p4.current .p4Tag {
+  .myTransform(-1000px);
+}
+.p4.current .p4Title {
+  .myTransform(1000px);
+}
+.p4.current .p4Main {
+  .myTransform(0, 0, 0, 0deg, 0deg, 0deg, 5, 5, 1);
+}
+
+/****************第五屏*****************/
+.p5 .p5Main {
+  .myAbsoluteC();
+  ul {
+    .myAbsoluteC();
+    .myCenter(600px);
+    li {
+      background: url(../img/page5_bubble_glow.png) center center no-repeat;
+      background-size: cover;
+      transition: all 1s linear;
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+.p5 .p5Main ul li:nth-child(1) {
+  .myAbsoluteC(305px, 305px);
+  margin-left: -152px;
+  margin-top: -152px;
+  .myCenter(305px);
+}
+.p5 .p5Main ul li:nth-child(2) {
+  .myAbsoluteC(210px, 210px);
+  margin-left: -272px;
+  margin-top: -234px;
+  .myCenter(210px);
+}
+.p5 .p5Main ul li:nth-child(3) {
+  .myAbsoluteC(250px, 250px);
+  .myCenter(250px);
+  margin-left: -324px;
+  margin-top: 70px;
+}
+.p5 .p5Main ul li:nth-child(4) {
+  .myAbsoluteC(180px, 180px);
+  .myCenter(180px);
+  margin-left: 175px;
+  margin-top: 46px;
+}
+.p5 .p5Main ul li:nth-child(5) {
+  .myAbsoluteC(120px, 120px);
+  .myCenter(120px);
+  margin-left: 170px;
+  margin-top: -195px;
+}
+.p5 .p5Main ul li:nth-child(6) {
+  .myAbsoluteC(90px, 90px);
+  margin-left: 265px;
+  margin-top: -140px;
+  .myCenter(90px);
+}
+.p5 .p5Tag {
+  .myAbsoluteC(230px, 80px);
+  margin-left: -465px;
+  margin-top: -30px;
+  transition: all 1s linear;
+  color: @colorF;
+}
+.p5 .p5Title {
+  .myAbsoluteC(460px, 150px);
+  margin-left: 190px;
+  margin-top: -75px;
+  transition: all 1s linear;
+}
+.p5.current .p5Tag, .p5.current .p5Title {
+  transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(-90deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+  transform-origin: 100% 100%;
+}
+.p5.current .p5Main li:nth-child(1) {
+  margin-left: -1300px;
+  margin-top: -200px;
+}
+.p5.current .p5Main li:nth-child(2) {
+  margin-left: -1000px;
+  margin-top: -500px;
+}
+.p5.current .p5Main li:nth-child(3) {
+  margin-left: -1500px;
+  margin-top: -500px;
+}
+.p5.current .p5Main li:nth-child(4) {
+  margin-left: 1300px;
+  margin-top: 500px;
+}
+.p5.current .p5Main li:nth-child(5) {
+  margin-left: 1500px;
+  margin-top: -400px;
+}
+.p5.current .p5Main li:nth-child(6) {
+  margin-left: 800px;
+  margin-top: -600px;
+}
+
+/***************动画*****************/
+@keyframes spinSportZ {
+  0% {
+    .myTransform(0, 0, 0, 0deg, 0deg, 0deg, 1, 1, 1);
+  }
+  100% {
+    .myTransform(0, 0, 0, 0deg, 0deg, 360deg, 1, 1, 1);
+  }
+}
+@keyframes spinSportY {
+  0% {
+    .myTransform(0, 0, 0, 0deg, 0deg, 0deg, 1, 1, 1);
+  }
+  100% {
+    .myTransform(0, 0, 0, 0deg, 360deg, 0deg, 1, 1, 1);
+  }
+}
+@keyframes topAndBt {
+  0% {
+    .myTransform(0, 10px, 0, 0deg, 0deg, 0deg, 1, 1, 1);
+  }
+  100% {
+    .myTransform(0, 0, 0, 0deg, 0deg, 0deg, 1, 1, 1);
+  }
+}
+@keyframes p3Spin {
+  0% {
+    .myTransform(0, 0, 0, 70deg, 0deg, 5deg, 1, 1, 1);
+  }
+  100% {
+    .myTransform(0, 0, 0, 70deg, 360deg, 5deg, 1, 1, 1);
+  }
+}
+@keyframes p4Line {
+  0% {
+    .myTransform(-1000px, 0, 0, 0deg, 0deg, 0deg, 1, 1, 1);
+  }
+  100% {
+    .myTransform(1000px, 0, 0, 0deg, 0deg, 0deg, 1, 1, 1);
+  }
+}
+
