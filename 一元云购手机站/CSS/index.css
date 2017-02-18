@@ -108,10 +108,12 @@ body {
     position: relative;
 }
 .banner ul {
-    width: 300%;
+    width: 500%;
+    -webkit-transform: translateX(-20%);
+    transform: translateX(-20%);
 }
 .banner ul li {
-    width: 33.33%;
+    width: 20%;
     float: left;
 }
 .banner ui li img {
@@ -136,7 +138,7 @@ body {
     float: left;
 }
 .curOi {
-    background: #999 !important;
+    background: red !important;
 }
 
 /* 最新揭晓 / 热门推荐*/
