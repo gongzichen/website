@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>努比亚官网</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/base.css">
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="css/less.css">
+    <script src="js/index.js"></script>
 </head>
 <body>
 <!-- 头部开始 -->
-<div class="header">
+<header class="header cm">
     <div class="header-inner">
-        <div class="log">
+        <h1 class="log">
             <a href="#">
                 <img src="images/nubia-logo.png" alt="">
             </a>
-        </div>
+        </h1>
         <div class="navRight">
             <div class="navRight-left">
                 <ul>
                     <li><a href="#">首页</a></li>
                     <li><a href="#">商城</a></li>
-                    <li><a href="#" class="current">产品</a></li>
+                    <li><a href="#">产品</a></li>
                     <li><a href="#">应用</a></li>
                     <li><a href="#">服务</a></li>
                     <li><a href="#">体验店</a></li>
@@ -30,87 +32,94 @@
             </div>
             <div class="navRight-right">
                 <ul>
-                    <li></li>
+                    <li  ></li>
                     <li><a href="#">登录</a></li>
                     <li><a href="#">注册</a></li>
                 </ul>
             </div>
         </div>
     </div>
-</div>
+</header>
+
+
 <!-- 导航开始 -->
-<div class="nav">
-    <div class="nav-inner">
-        <a href="#"><img src="images/nav-phone1.png">Z11 minis <span>新款</span></a>
-        <a href="#"><img src="images/nav-phone2.png">Z11</a>
-        <a href="#"><img src="images/nav-phone3.png">Z11 Max</a>
-        <a href="#"><img src="images/nav-phone4.png">Z11 mini</a>
-        <a href="#"><img src="images/nav-phone5.png">N1</a>
-        <a href="#"><img src="images/nav-phone6.png">布拉格</a>
-        <a href="#"><img src="images/nav-phone7.png">My 布拉格</a>
-    </div>-
-</div>
+<nav class="nav">
+   <ul>
+       <li><a href="#"><img src="images/nav-phone1.png"> <span>Z11 minis新款</span></a></li>
+       <li><a href="#"><img src="images/nav-phone2.png"><span>Z11</span></a></li>
+       <li><a href="#"><img src="images/nav-phone3.png"><span>Z11 Max</span></a></li>
+       <li><a href="#"><img src="images/nav-phone4.png"><span>Z11 mini </span></a></li>
+       <li><a href="#"><img src="images/nav-phone5.png"><span>N1</span></a></li>
+       <li><a href="#"><img src="images/nav-phone6.png"> <span>布拉格</span> </a></li>
+       <li><a href="#"><img src="images/nav-phone7.png"><span>My 布拉格 </span> </a></li>
+    </ul>
+</nav>
 <!-- 广告开始 -->
 <div class="banner">
-    <div class="banner-img">
-        <a href="#">
-            <img src="images/banner.jpg" alt="">
-        </a>
+        <ul>
+            <li><a href="#"><img src="images/banner03.jpg" alt=""></a></li>
+
+            <li><a href="#"><img src="images/banner.jpg" alt=""  ></a></li>
+            <li><a href="#"><img src="images/banne01.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/banner03.jpg" alt=""></a></li>
+
+            <li><a href="#"><img src="images/banner.jpg" alt=""></a></li>
+        </ul>
         <ol>
-            <li><i></i></li>
-            <li><i></i></li>
-            <li><i></i></li>
+            <li class="cur"><i ></i></li>
             <li><i></i></li>
             <li><i></i></li>
         </ol>
-    </div>
-    <div class="banner-vedio header-inner">
-        <ul>
-            <li>
-                <a href="#">
-                    <img src="images/video1.jpg" class="banner-vedio-img">
-                    <dl>
-                        <dt>
-                            <img src="images/nb-pro-video-ico-s.png" alt="">
-                        </dt>
-                        <dd>
-                            <h2>Z11 黑金版</h2>
-                            <p>产品视频</p>
-                        </dd>
-                    </dl>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="images/video2.jpg" alt="">
-                    <dl>
-                        <dt>
-                            <img src="images/nb-pro-video-ico-s.png" alt="">
-                        </dt>
-                        <dd>
-                            <h2>Z11 黑金版</h2>
-                            <p>产品视频</p>
-                        </dd>
-                    </dl>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="images/video3.jpg" alt="">
-                    <dl>
-                        <dt>
-                            <img src="images/nb-pro-video-ico-s.png" alt="">
-                        </dt>
-                        <dd>
-                            <h2>Z11 黑金版</h2>
-                            <p>产品视频</p>
-                        </dd>
-                    </dl>
-                </a>
-            </li>
-        </ul>
-    </div>
 </div>
+<!--展示-->
+<div class="show">
+    <ul>
+        <li>
+            <a href="#">
+                <img src="images/video1.jpg" class="banner-vedio-img">
+                <dl>
+                    <dt>
+                        <img src="images/nb-pro-video-ico-s.png" alt="">
+                    </dt>
+                    <dd>
+                        <h2>Z11 黑金版</h2>
+                        <p>产品视频</p>
+                    </dd>
+                </dl>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="images/video2.jpg" alt="">
+                <dl>
+                    <dt>
+                        <img src="images/nb-pro-video-ico-s.png" alt="">
+                    </dt>
+                    <dd>
+                        <h2>Z11 黑金版</h2>
+                        <p>产品视频</p>
+                    </dd>
+                </dl>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="images/video3.jpg" alt="">
+                <dl>
+                    <dt>
+                        <img src="images/nb-pro-video-ico-s.png" alt="">
+                    </dt>
+                    <dd>
+                        <h2>Z11 黑金版</h2>
+                        <p>产品视频</p>
+                    </dd>
+                </dl>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
 <!--内容开始 -->
 <div class="content header-inner">
     <div class="content-new">
@@ -273,5 +282,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>
