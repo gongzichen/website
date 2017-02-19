@@ -3,7 +3,15 @@
  */
 window.onload = function(){
         sliding()
+        time()
 }
+window.onresize = function(){
+    setTimeout(function(){
+        window.location.reload();
+    }, 200);
+};
+
+
 
 //轮播图
 function sliding(){
@@ -31,49 +39,112 @@ function sliding(){
     }
 
     var timer = null, index = 1;
-    timer = setInterval(function(){
+    timer = setInterval(test,1000);
+    function test(){
         index++;
         addTranslate();
         sportsX(-index * bannerW);
-    },1000)
+    }
 
 
     ul.addEventListener('transitionEnd',function(){
-       if(index>3){
-           index = 1;
-       }else if(index < 0){
-           index = 3;
-       }
-        olSports()
+        if(index >= 4){
+            index = 1;
+        }else if(index <= 0){
+            index = 3
+        }
         removeTranslate();
         sportsX(-index* bannerW);
+        olSports()
     });
 
     ul.addEventListener('webkitTransitionEnd',function(){
-        if(index > 3){
+        if(index >= 4){
             index = 1;
-        }else if(index < 0){
-            index = 3;
+        }else if(index <= 0){
+            index = 3
         }
-        olSports()
         removeTranslate();
         sportsX(-index * bannerW);
+        olSports()
     });
 
 
-//   原点跟着滚动
+//   圆点跟着滚动
     function olSports(){
         for(var i =0;i<curLis.length;i++)
         {
             curLis[i].className = '';
         }
         var liIndex = index;
-        console.log(liIndex);
-        if(index > 3){
+        //console.log(liIndex);
+        if(index >= 4){
             index = 1;
-        }else if(index < 0){
-            index = 3;
+        }else if(index <= 0){
+            index = 3
         }
         curLis[index-1].className = 'curOi';
     }
+
+//    触目滑动
+    var start = 0,end = 0,move = 0;
+    ul.addEventListener('touchstart',function(e){
+        clearInterval(timer);
+       start = e.touches[0].clientX;
+        console.log(start);
+    });
+    //容易产生浏览器BUG 事件现象丢失
+    window.addEventListener('touchmove',function(e){
+        e.preventDefault();
+        end  = e.touches[0].clientX;
+        move = start -end;
+
+        console.log(index+"滑动的距离");
+        removeTranslate();
+        sportsX(-index * bannerW - move);
+    })
+
+    ul.addEventListener('touchend',function(e){
+        if(Math.abs(move)>= 1/3* bannerW && end !=0 ){
+         if(move > 0){
+            index++;
+        }else {
+             index--;
+         }
+        }
+        console.log(index);
+        addTranslate();
+        sportsX(-index * bannerW);
+        timer = setInterval(test,1000);
+        start = 0;
+        end = 0;
+        move = 0;
+    })
+}
+
+//时间
+function time(){
+    var time = document.getElementsByClassName('time')[0];
+    var spanS = time.getElementsByTagName('span');
+    if(end <=0){
+        clearInterval(tiemr);
+    }
+    // 假设时间
+    var timer = null, end = 5 *60 *60;
+    timer = setInterval(function(){
+        end--;
+        if(end<=0) {
+            clearInterval(timer);
+        }
+            var h =Math.floor(end/(60*60));
+            var m = Math.floor(end %(60*60)/60);
+            var s = end % 60;
+            //console.log(h,m,s);
+            spanS[0].innerHTML = h>10? Math.floor(h/10):0;
+            spanS[1].innerHTML = h%10;
+            spanS[3].innerHTML = m>10? Math.floor(m/10):0;
+            spanS[4].innerHTML = m%10;
+            spanS[6].innerHTML = s>10? Math.floor(s/10):0;
+            spanS[7].innerHTML = s%10;
+    },1000)
 }

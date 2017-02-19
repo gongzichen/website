@@ -116,7 +116,7 @@ body {
     width: 20%;
     float: left;
 }
-.banner ui li img {
+.banner ul li img {
     width: 100%;
     height: auto;
 }
@@ -164,6 +164,12 @@ body {
 {
     float: right;
 }
+
+/*.time span {*/
+    /*padding: 2px;*/
+    /*margin:0 5px;*/
+    /**/
+/*}*/
 
 .newest_content {
     width: 100%;
