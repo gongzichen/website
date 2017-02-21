@@ -1,0 +1,353 @@
+.header{
+  background: transparent;
+  width: 100%;
+  height: 40px;
+  z-index: 5;
+  position: fixed;
+  max-width: 690px;
+  min-width: 340px;
+
+  .headerLogo{
+      position: absolute;
+      top: 5px;
+      left: 8px;
+      width: 60px;
+      height: 30px;
+    background: url(../img/sprites.png)0 -103px no-repeat;
+    background-size: 200px 200px;
+    -webkit-background-size: 200px 200px;
+  }
+  form {
+    width: 100%;
+    padding: 5px 45px 0 70px;
+    position: relative;
+    span {
+      background-position: -60px -110px;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 77px;
+      top: 10px;
+    }
+    input{
+      width: 100%;
+      border-radius: 15px;
+      padding-left: 30px;
+      height: 30px;
+      line-height: 30;
+      }
+  }
+  .login{
+    position: absolute;
+    right:5px;
+    top: 5px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #fff;
+  }
+}
+
+//banner
+.banner {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  ul{
+    width: 1000%;
+    transform: translate(-10%);
+    -webkit-transform: tanslate(-10%);
+    li{
+      width: 10%;
+      float: left;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  ol{
+    width: 130px;
+    height: 10px;
+    //background: red;
+    background: rbga(0,0,0,.5);
+    position: absolute;
+    left:50%;
+    margin-left: -65px;
+    bottom: 10px;
+    li{
+      float: left;
+      width: 10px;
+      height: 10px;
+      margin-left: 5px;
+      border-radius: 50%;
+      background: yellow;
+
+    }
+  }
+}
+
+.current {
+  background: deepskyblue !important;
+}
+
+
+//nav 导航栏
+.nav {
+  width: 100%;
+  ul{
+   margin: 20px 0 10px;
+    width: 100%;
+    overflow: hidden;
+    li{
+      width:calc(100%/5);
+      text-align:center;
+      float: left;
+      margin-bottom: 10px;
+      img{
+        width: 40px;
+        height: 40px;
+      }
+      p{
+        color: #000;
+      }
+      
+    }
+  }
+
+}
+
+//秒杀
+.second {
+  background: #fff;
+  overflow: hidden;
+  padding:15px 6px;
+  .second_top{
+    overflow: hidden;
+    background: #fff;
+    .gc_second{
+
+      width: 69px;
+      float: left;
+      top: 9px;
+      img {
+        width: 100%;}
+    }
+    p{
+      float: left;
+      height: 36px;
+      line-height: 28px;
+      color: #000;
+      margin-left: 5px;
+    }
+
+    .second_count{
+      float: left;
+      margin-left: 10px;
+      padding: 2px;
+      line-height: 22px;
+
+      color: #fff;
+      span {
+        padding: 1px 3px;
+        margin-left: 1px;
+        background: black;
+        color: #fff;
+      }
+      
+    }
+      .more{
+        float: right;
+        line-height: 31px;
+        position: relative;
+        padding-right: 25px;
+        color: #000;
+      }
+
+  }
+
+  //底部
+  .second_bottom{
+    ul{
+      overflow: hidden;
+      li{
+        background: #fff;
+        float: left;
+        width: (100%/3);
+        text-align: center;
+        a{
+          display: block;
+          width: 100%;
+          border-right: 1px solid #ccc;
+          img{
+            width: 64%;
+          }
+        }
+      }
+    }
+  }
+}
+.second_count span:nth-child(3),
+.second_count span:nth-child(6)
+{
+  background: #fff !important;
+  color: black !important;
+}
+
+.second_bottom ul li:nth-child(3) a{
+  border-right: none;
+}
+.more::after{
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 12px;
+  //background:url(../img/arrow_rt.pnga)no-repeat;
+  background:url(../img/arrow_rt.png)no-repeat;
+  background-size: 12px 12px;
+  top: 10px;
+  left: 29px;
+}
+
+//秒杀
+.price {
+  margin-top: 5px;
+  color: red;
+}
+.price1{
+  color: black;
+  text-decoration:line-through;
+  margin-bottom: 5px;
+}
+
+//手机专享
+.module{
+  background: #fff;
+  margin-top:15px;
+  width: 100%;
+
+  .moduleTop{
+    width: 100%;
+    h3{
+      padding-left: 30px;
+      line-height: 36px;
+      color: #000;
+      font-weight: 400;
+      position: relative;
+      border-top:1px  solid #ccc;
+      background: #fff;
+    }
+  }
+
+  .moduleBottom{
+    border-top: 1px solid #ccc;
+    ul{
+         background: #fff;
+    }
+  }
+
+}
+
+.module .moduleTop h3::after{
+  position: absolute;
+  content: '';
+  width: 4px;
+  height: 20px;
+  top: 8px;
+  left: 19px;
+  background: red;
+}
+
+
+.recommend {
+  width: 100%;
+  background: #dfdfdf;
+  overflow: hidden;
+
+  .secRecommend {
+    .recommendTop{
+      width: 100%;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      position: relative;
+      span{
+        height: 36px;
+        width: 100px;
+        color: #000;
+        padding:0 20px;
+        position: relative;
+        background: #fff;
+      }
+    }
+
+    .recommendBottom{
+      width: 100%;
+
+      li{
+        padding: 5px;
+        width: 49%;
+        float: left;
+        background: #fff;
+        margin-top: 10px;
+        img{
+          width: 100%;
+        }
+        p{
+          font-size: 13px;
+          color: #000;
+        }
+
+        .tj_bottom {
+          width: 100%;
+          margin-bottom: 5px;
+          span {
+            font-size: 13px;
+            color: #000;
+          }
+          a{
+            float: right;
+            margin-right: 10px;
+            border: 1px solid #000;
+            border-radius: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.recommendBottom ul li:nth-child(2n){
+  float: right !important;
+}
+.recommendTop::after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  background: #000;
+  position: absolute;
+   top:50%;
+   left: 2px;
+  z-index: -1;
+}
+
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom:0;
+  left:0;
+  background: #e0e0e0;
+  ul{
+    width: 100%;
+
+    li{
+      box-sizing: border-box;
+      width: 20%;
+      float: left;
+      text-align: center;
+      a{
+        img{
+          width: 70px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,308 @@
+.header {
+  background: transparent;
+  width: 100%;
+  height: 40px;
+  z-index: 5;
+  position: fixed;
+  max-width: 690px;
+  min-width: 340px;
+}
+.header .headerLogo {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  width: 60px;
+  height: 30px;
+  background: url(../img/sprites.png) 0 -103px no-repeat;
+  background-size: 200px 200px;
+  -webkit-background-size: 200px 200px;
+}
+.header form {
+  width: 100%;
+  padding: 5px 45px 0 70px;
+  position: relative;
+}
+.header form span {
+  background-position: -60px -110px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 77px;
+  top: 10px;
+}
+.header form input {
+  width: 100%;
+  border-radius: 15px;
+  padding-left: 30px;
+  height: 30px;
+  line-height: 30;
+}
+.header .login {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  line-height: 30px;
+  font-size: 16px;
+  color: #fff;
+}
+.banner {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.banner ul {
+  width: 1000%;
+  transform: translate(-10%);
+  -webkit-transform: tanslate(-10%);
+}
+.banner ul li {
+  width: 10%;
+  float: left;
+}
+.banner ul li img {
+  width: 100%;
+}
+.banner ol {
+  width: 130px;
+  height: 10px;
+  background: rbga(0, 0, 0, 0.5);
+  position: absolute;
+  left: 50%;
+  margin-left: -65px;
+  bottom: 10px;
+}
+.banner ol li {
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  border-radius: 50%;
+  background: yellow;
+}
+.current {
+  background: deepskyblue !important;
+}
+.nav {
+  width: 100%;
+}
+.nav ul {
+  margin: 20px 0 10px;
+  width: 100%;
+  overflow: hidden;
+}
+.nav ul li {
+  width: calc(20%);
+  text-align: center;
+  float: left;
+  margin-bottom: 10px;
+}
+.nav ul li img {
+  width: 40px;
+  height: 40px;
+}
+.nav ul li p {
+  color: #000;
+}
+.second {
+  background: #fff;
+  overflow: hidden;
+  padding: 15px 6px;
+}
+.second .second_top {
+  overflow: hidden;
+  background: #fff;
+}
+.second .second_top .gc_second {
+  width: 69px;
+  float: left;
+  top: 9px;
+}
+.second .second_top .gc_second img {
+  width: 100%;
+}
+.second .second_top p {
+  float: left;
+  height: 36px;
+  line-height: 28px;
+  color: #000;
+  margin-left: 5px;
+}
+.second .second_top .second_count {
+  float: left;
+  margin-left: 10px;
+  padding: 2px;
+  line-height: 22px;
+  color: #fff;
+}
+.second .second_top .second_count span {
+  padding: 1px 3px;
+  margin-left: 1px;
+  background: black;
+  color: #fff;
+}
+.second .second_top .more {
+  float: right;
+  line-height: 31px;
+  position: relative;
+  padding-right: 25px;
+  color: #000;
+}
+.second .second_bottom ul {
+  overflow: hidden;
+}
+.second .second_bottom ul li {
+  background: #fff;
+  float: left;
+  width: 33.33333333%;
+  text-align: center;
+}
+.second .second_bottom ul li a {
+  display: block;
+  width: 100%;
+  border-right: 1px solid #ccc;
+}
+.second .second_bottom ul li a img {
+  width: 64%;
+}
+.second_count span:nth-child(3),
+.second_count span:nth-child(6) {
+  background: #fff !important;
+  color: black !important;
+}
+.second_bottom ul li:nth-child(3) a {
+  border-right: none;
+}
+.more::after {
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: url(../img/arrow_rt.png) no-repeat;
+  background-size: 12px 12px;
+  top: 10px;
+  left: 29px;
+}
+.price {
+  margin-top: 5px;
+  color: red;
+}
+.price1 {
+  color: black;
+  text-decoration: line-through;
+  margin-bottom: 5px;
+}
+.module {
+  background: #fff;
+  margin-top: 15px;
+  width: 100%;
+}
+.module .moduleTop {
+  width: 100%;
+}
+.module .moduleTop h3 {
+  padding-left: 30px;
+  line-height: 36px;
+  color: #000;
+  font-weight: 400;
+  position: relative;
+  border-top: 1px  solid #ccc;
+  background: #fff;
+}
+.module .moduleBottom {
+  border-top: 1px solid #ccc;
+}
+.module .moduleBottom ul {
+  background: #fff;
+}
+.module .moduleTop h3::after {
+  position: absolute;
+  content: '';
+  width: 4px;
+  height: 20px;
+  top: 8px;
+  left: 19px;
+  background: red;
+}
+.recommend {
+  width: 100%;
+  background: #dfdfdf;
+  overflow: hidden;
+}
+.recommend .secRecommend .recommendTop {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  position: relative;
+}
+.recommend .secRecommend .recommendTop span {
+  height: 36px;
+  width: 100px;
+  color: #000;
+  padding: 0 20px;
+  position: relative;
+  background: #fff;
+}
+.recommend .secRecommend .recommendBottom {
+  width: 100%;
+}
+.recommend .secRecommend .recommendBottom li {
+  padding: 5px;
+  width: 49%;
+  float: left;
+  background: #fff;
+  margin-top: 10px;
+}
+.recommend .secRecommend .recommendBottom li img {
+  width: 100%;
+}
+.recommend .secRecommend .recommendBottom li p {
+  font-size: 13px;
+  color: #000;
+}
+.recommend .secRecommend .recommendBottom li .tj_bottom {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.recommend .secRecommend .recommendBottom li .tj_bottom span {
+  font-size: 13px;
+  color: #000;
+}
+.recommend .secRecommend .recommendBottom li .tj_bottom a {
+  float: right;
+  margin-right: 10px;
+  border: 1px solid #000;
+  border-radius: 2px;
+}
+.recommendBottom ul li:nth-child(2n) {
+  float: right !important;
+}
+.recommendTop::after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  z-index: -1;
+}
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #e0e0e0;
+}
+.footer ul {
+  width: 100%;
+}
+.footer ul li {
+  box-sizing: border-box;
+  width: 20%;
+  float: left;
+  text-align: center;
+}
+.footer ul li a img {
+  width: 70px;
+}
