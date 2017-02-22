@@ -1,0 +1,123 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.header {
+    width: 100%;
+    background: url("../img/header-bg.png") repeat-x;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    max-width: 690px;
+    min-width: 340px;
+}
+.header .icon_back{
+    width: 44px;
+    height: 40px;
+    position: absolute;
+    padding: 10px 12px;
+    top: 0px;
+    left: 0px;
+    background-position: -20px 0;
+    background-clip: content-box;
+    background-origin: content-box;
+}
+.header form {
+    width: 100%;
+    padding: 0px 50px 0px 50px;
+}
+.header form input {
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 10px;
+    height: 30px;
+    margin-top: 8px;
+
+}
+.header .icon_menu {
+    width: 44px;
+    height: 40px;
+    position: absolute;
+    padding: 10px 12px;
+    top: 0px;
+    right: 0px;
+    background-position: -60px 0;
+    background-clip: content-box;
+    background-origin: content-box;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    padding-top: 45px;
+}
+
+.main_left{
+    width: 90px;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+.main_left li {
+    width: 90px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 13px;
+    background:#e0e0e0;
+
+}
+.main_left li+li{
+    border-top: 1px solid #ccc;
+}
+.cur {
+    background-color: #fff !important;
+
+}
+
+.main_left li.cur a {
+    color: red ;
+}
+
+.main_left li a {
+    color:#000000;
+    display: block;
+    width:100%
+}
+
+.main_right {
+    height: 100%;
+    /*-绝缘体-*/
+    overflow: hidden;
+    padding: 10px 8px;
+}
+
+
+.main_right>a>img {
+    width: 100%;
+    display: block;
+}
+
+.catrgory {
+    padding: 10px;
+}
+.catrgory h3{
+    width: 100%;
+    font-weight: 400;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: #000;
+    border-bottom: 1px solid #cccccc;
+}
+
+.main_right .catrgory ul li {
+    text-align: center;
+    float: left;
+    width: calc(100%/3);
+    margin: 5px 0;
+}
+
+.main_right .catrgory ul li p {
+    color: #000;
+}
