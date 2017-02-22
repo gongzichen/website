@@ -41,11 +41,13 @@ a {
 }
 
 /*抽取同意的类名前缀*/
-[class^='icon_']{
-    background: url(../img/sprites.png)no-repeat;
-    background-size: 200px 200px;
-    -webkit-background-size: 200px 200px;
+[class^="icon_"]{
+    background: url("../img/sprites.png")no-repeat;
+    -webkit-background-size:200px 200px;
+    background-size:200px 200px;
 }
+
+
 
 .fl {
     float: left;
