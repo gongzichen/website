@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闭包</title>
+</head>
+<body>
+	<script>
+		var fullname = 'John Doe';
+		var obj = {
+			fullname:'Colin Ihrig',
+			prop:{
+				fullname:'Aurelio De Rosa',
+				getFullName:function(){
+					return this.fullname;
+				}
+			}
+		};
+		console.log(obj.prop.getFullName());  // this = prop Aurelio De Rosa 
+		var test = obj.prop.getFullName;    
+		console.log(test());  // this =  windows   John Doe
+
+	</script>
+</body>
+</html>

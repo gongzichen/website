@@ -1,0 +1,354 @@
+*{
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+}
+/*落空类*/
+.cur{}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#boxes{
+    width: 100%;
+    height: 400%;
+    position: absolute;
+    top:0;
+    left:0;
+    background: red;
+}
+
+.box1{
+    width: 100%;
+    height: 25%;
+    background: tomato;
+    position: relative;
+}
+
+.box2{
+    width: 100%;
+    height: 25%;
+    background-color: black;
+    position: relative;
+}
+
+.box3 {
+    /*width: 100%;*/
+    height: 25%;
+    background-color: coral;
+    position: relative;
+}
+
+.box4{
+    /*width: 100%;*/
+    height: 25%;
+    background-color: dimgrey;
+}
+
+
+.box1>img {
+    width: 100%;
+    height: 100%;
+}
+
+/*************第一屏*******************/
+.box1 .title{
+    position: absolute;
+    top:120px;
+    left:60px;
+    width: 280px;
+    height: 127px;
+    animation: titleSport 0.75s 1;
+}
+
+.box1 .title>img {
+    width: 100%;
+    height: 100%;
+}
+
+.box1 .fir {
+    position: absolute;
+    top: 120px;
+    width: 150px;
+    height: 150px;
+    left:50%;
+    margin-left: -75px;
+    animation: fir_r 1s linear infinite ;
+}
+
+.box1 .fir>img{
+    width: 100%;
+    height: 100%;
+}
+.box1 .fir_c2{
+    position: absolute;
+    top: 120px;
+    width: 50px;
+    height: 50px;
+    right: 10px;
+    margin-left: -75px;
+    animation: fir_r 1s linear infinite ;
+}
+.box1 .fir_c2>img {
+    width: 100%;
+    height: 100%;
+}
+.box1 .topBg {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top:0;
+    left:0;
+    animation: topBgSport 0.8s 1;
+}
+.box1 .topBg>img {
+    width: 100%;
+    height: 100%;
+}
+.box1 .con {
+    position: absolute;
+    top: 300px;
+    right: 10px;
+    width: 250px;
+    height: 100px;
+    animation: conSport 0.8s 1;
+}
+.box1 .con>img{
+    width: 100%;
+    height: 100%;
+}
+.box1 .icon {
+    position: absolute;
+    top:490px;
+    right:100px;
+    width: 35px;
+    height: 34px;
+    animation: firSport 0.5s infinite alternate;
+}
+.box1 .icon>img {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.box1 .fir_go{
+    position: absolute;
+    top: 545px;
+    right: 78px;
+    width: 80px;
+    height: 80px;
+    animation: goOpacity 1s infinite alternate;
+}
+.box1 .fir_go>img {
+    width: 100%;
+    height: 100%;
+}
+@keyframes fir_r {
+    0%{
+        -webkit-transform: rotate(0deg);
+    }
+    100%{ -webkit-transform: rotate(360deg);}
+}
+@keyframes titleSport {
+    0%{transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) scaleX(0.2) scaleY(0.2) scaleZ(0.2)}
+    30%{  transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(0.2) }
+    60%{ transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) scaleX(1.2) scaleY(1.2) scaleZ(0.2)}
+    80%{ transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) scaleX(0.8) scaleY(0.8) scaleZ(0.2)}
+    100%{transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)}
+}
+@keyframes conSport {
+    0%{transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(90deg)
+    rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)}
+    100%{transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)}
+}
+@keyframes topBgSport {
+    0%{transform:translateX(900px) translateY(0px) translateZ(0px) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)}
+    60%{transform:translateX(-10px) translateY(0px) translateZ(0px) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)}
+    80%{transform:translateX(10px) translateY(0px) translateZ(0px) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)}
+    100%{transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)}
+}
+@keyframes firSport {
+    0%{transform:translateX(0px) translateY(10px) translateZ(0px) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)}
+    100%{transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)}
+}
+@keyframes goOpacity {
+    0%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/********第二屏******/
+
+.box2 .bg{
+    position: absolute;
+    top: 150px;
+    left:0;
+    height: 400px;
+    border-top: 5px solid #00f3f8;
+    border-bottom: 5px solid #00f3f8;
+}
+
+.box2 div.cur{
+    animation: bgSport 0.5s 1;
+}
+.box2 .bg>img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.box2 .template {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    background-color:rgba(0,0,0,0.4);
+}
+
+.box2  .bg>.template>h3.title {
+    padding-top: 50px;
+    text-align: center;
+    color: #00f3f8;
+}
+
+.box2 .template-con {
+    width: 252px;
+    height: 224px;
+    position: absolute;
+    top: 75px;
+    left: 100px;
+}
+.box2 .template-con>img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.box2  div.cur .template-con>img{
+    animation: templateCon 1.2s infinite alternate;
+}
+
+.box2   .content_2 {
+    position: absolute;
+    padding: 25px;
+    color: #00f3f8;
+    top:0;
+    left:0;
+    height: 20px;
+    width: 100%;
+}
+.box2   .content_3 {
+    position: absolute;
+    padding: 25px;
+    color: #00f3f8;
+    top:30px;
+    left:0;
+    height: 20px;
+    width: 100%;
+}
+.box2  .content_4 {
+    position: absolute;
+    padding: 25px;
+    color: #00f3f8;
+    top:60px;
+    left:0;
+    height: 20px;
+    width: 100%;
+}
+.box2  .box2-con-go{
+    position: absolute;
+    bottom: 35px;
+    right: 124px;
+    width: 76px;
+    height: 76px;
+}
+.box2  .box2-con-go>img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes bgSport {
+    0%{transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(100deg)
+    rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)}
+    100%{transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)}
+}
+
+@keyframes templateCon {
+    0%{transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) scaleX(0.85) scaleY(0.85) scaleZ(1)}
+    100%{transform:translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)}
+}
+
+
+/*****第三屏*****/
+
+.box3 .con {
+    width: 1845px;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.box3 .con>img{
+    width: 100%;
+    height: 100%;
+}
+
+.box3 .stage_1 {
+    position: absolute;
+    background: url("../img/stage_1_light.png")-988px -455px no-repeat;
+    width: 208px;
+    height: 111px;
+    top: 279px;
+    left: 987px;
+    z-index: 555;
+    animation:box3stageSport 1s infinite alternate;
+}
+.box3 .stage_1>img{
+    width: 100%;
+    height: 100%;
+}
+
+.box3 .two_tem{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.4);
+    display: none;
+}
+
+.box .box3-bg-img{
+    position: absolute;
+}
+
+
+@keyframes box3stageSport  {
+    0%{
+        opacity: 0.6;
+    }
+    100%{
+        opacity: 1;
+    }
+}
