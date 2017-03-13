@@ -34,7 +34,7 @@ html,body{
 }
 
 .box3 {
-    /*width: 100%;*/
+    width: 100%;
     height: 25%;
     background-color: coral;
     position: relative;
@@ -301,26 +301,29 @@ html,body{
 
 /*****第三屏*****/
 
-.box3 .con {
-    width: 1845px;
+.box3 .box3-con {
+    width: 1550px;
     height: 100%;
     position: absolute;
     top:0;
     left:0;
+    background: url("../img/stage1_bg.jpg");
+    background-size: 100% 100%;
 }
 
-.box3 .con>img{
-    width: 100%;
-    height: 100%;
-}
+/*.box3 .box3-bg-img{*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*position: absolute;*/
+/*}*/
 
 .box3 .stage_1 {
     position: absolute;
-    background: url("../img/stage_1_light.png")-988px -455px no-repeat;
-    width: 208px;
-    height: 111px;
-    top: 279px;
-    left: 987px;
+    background: url("../img/stage_1_light.png")-981px -455px no-repeat;
+    width: 202px;
+    /*height: 105px;*/
+    /*top: 268px;*/
+    left: 807px;
     z-index: 555;
     animation:box3stageSport 1s infinite alternate;
 }
@@ -337,11 +340,10 @@ html,body{
     height: 100%;
     background: rgba(0,0,0,.4);
     display: none;
+
 }
 
-.box .box3-bg-img{
-    position: absolute;
-}
+
 
 
 @keyframes box3stageSport  {
